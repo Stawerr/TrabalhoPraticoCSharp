@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace TrabalhoPratico
 {
@@ -53,6 +55,7 @@ namespace TrabalhoPratico
             veiculos.Add(new Camiao("Mercedes", "Camião", "Preto", "Gasóleo", 180, "alugado", new DateTime(2022, 04, 05), "VO-50-60", 2500));
             veiculos.Add(new Camiao("Scania", "Camião", "Preto", "Gasóleo", 160, "disponível", new DateTime(2022, 04, 05), "KF-16-08", 1700));
             #endregion;
+           
 
             int op = 1;
             while (op != 0)
@@ -294,7 +297,7 @@ namespace TrabalhoPratico
 
         private static void exportarHTML()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
