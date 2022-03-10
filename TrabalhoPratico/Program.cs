@@ -12,9 +12,9 @@ namespace TrabalhoPratico
         {
             #region InserirTabelaVeiculos;
             veiculos = new List<Veiculo>();
-            veiculos.Add(new Carro("Audi A1", "Carro", "Cinza", "Gasóleo", 20, "disponível", new DateTime(2022, 04, 05),"XY-67-52", 5, "Manual"));
-            veiculos.Add(new Carro("Audi A1", "Carro", "Preto", "Gasóleo", 20, "disponível", new DateTime(2022, 04, 05), "AY-22-31", 5, "Manual"));
-            veiculos.Add(new Carro("Audi A1", "Carro", "Branco", "Gasóleo", 20, "alugado", new DateTime(2022, 04, 05), "XB-22-52", 5, "Manual"));
+            veiculos.Add(new Carro("Audi A1   ", "Carro", "Cinza", "Gasóleo", 20, "disponível", new DateTime(2022, 04, 05),"XY-67-52", 5, "Manual"));
+            veiculos.Add(new Carro("Audi A1   ", "Carro", "Preto", "Gasóleo", 20, "disponível", new DateTime(2022, 04, 05), "AY-22-31", 5, "Manual"));
+            veiculos.Add(new Carro("Audi A1   ", "Carro", "Branco", "Gasóleo", 20, "alugado", new DateTime(2022, 04, 05), "XB-22-52", 5, "Manual"));
             veiculos.Add(new Carro("BMW Serie 1", "Carro", "Cinza", "Gasolina", 22, "disponível", new DateTime(2022, 04, 05), "XY-22-52", 5, "Manual"));
             veiculos.Add(new Carro("BMW Serie 1", "Carro", "Preto", "Gasolina", 22, "disponível", new DateTime(2022, 04, 05), "XG-01-DC", 5, "Manual"));
             veiculos.Add(new Carro("BMW Serie 2", "Carro", "Cinza", "Gasolina", 24, "reservado", new DateTime(2022, 04, 05), "FY-76-52", 5, "Manual"));
