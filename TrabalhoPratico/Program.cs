@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace TrabalhoPratico
 {
@@ -297,7 +298,68 @@ namespace TrabalhoPratico
 
         private static void exportarHTML()
         {
-            
+            StreamWriter wr = new StreamWriter("stand.html");
+
+            wr.WriteLine("<html>");
+            wr.WriteLine("<style>table{margin-left: auto;margin-right: auto} th, td {border: 1px solid black;padding:5px;text-align:center}tr:nth-child(even) {background: #CCC}tr:nth-child(odd) {background: #FFF} div{text-align:center}</style> ");
+            wr.WriteLine("<body>");
+            wr.WriteLine("<div>");
+            wr.WriteLine("<h3>Carros</h3>");
+            wr.WriteLine("<table>");
+            wr.WriteLine("<tr><td>Marca</td><td>Tipo</td><td>Cor</td><td>Combustivel</td><td>Preco</td><td>Estado</td><td>Matricula</td><td>NºPortas</td><td>Tipo Caixa</td>");
+            for (int i = 0; i < veiculos.Count; i++)
+            {
+                if (typeof(Carro) == veiculos[i].GetType())
+                { Carro c = veiculos[i] as Carro;
+                    wr.WriteLine("<tr><td>" + c.Marca + "</td>" + "<td>" + ((Carro)veiculos[i]).Tipo + "</td>" + "<td>" + veiculos[i].Cor + "</td>" + "<td>" + veiculos[i].Combustivel + "</td>" + "<td>" + veiculos[i].Preco + "</td>" + "<td>" + veiculos[i].Estado + "</td>" + "<td>" + veiculos[i].Matricula + "</td>" + "<td>" + c.NPortas + "</td>" + "<td>" + c.TipoCaixa + "</td>");
+                }
+            }
+            wr.WriteLine("</tr>");
+            wr.WriteLine("</table>");
+            wr.WriteLine("<h3>Motas</h3>");
+            wr.WriteLine("<table>");
+            wr.WriteLine("<tr><td>Marca</td><td>Tipo</td><td>Cor</td><td>Combustivel</td><td>Preco</td><td>Estado</td><td>Matricula</td><td>Cilindrada</td>");
+            for (int i = 0; i < veiculos.Count; i++)
+            {
+                if (typeof(Mota) == veiculos[i].GetType())
+                {
+                    Mota c = veiculos[i] as Mota;
+                    wr.WriteLine("<tr><td>" + c.Marca + "</td>" + "<td>" + ((Mota)veiculos[i]).Tipo + "</td>" + "<td>" + veiculos[i].Cor + "</td>" + "<td>" + veiculos[i].Combustivel + "</td>" + "<td>" + veiculos[i].Preco + "</td>" + "<td>" + veiculos[i].Estado + "</td>" + "<td>" + veiculos[i].Matricula + "</td>" + "<td>" + c.Cilindrada + "</td>");
+                }
+            }
+            wr.WriteLine("</tr> <p></p>");
+            wr.WriteLine("</table>");
+            wr.WriteLine("<h3>Camiões</h3>");
+            wr.WriteLine("<table>");
+            wr.WriteLine("<tr><td>Marca</td><td>Tipo</td><td>Cor</td><td>Combustivel</td><td>Preco</td><td>Estado</td><td>Matricula</td><td>Peso Máximo</td>");
+            for (int i = 0; i < veiculos.Count; i++)
+            {
+                if (typeof(Camiao) == veiculos[i].GetType())
+                {
+                    Camiao c = veiculos[i] as Camiao;
+                    wr.WriteLine("<tr><td>" + c.Marca + "</td>" + "<td>" + ((Camiao)veiculos[i]).Tipo + "</td>" + "<td>" + veiculos[i].Cor + "</td>" + "<td>" + veiculos[i].Combustivel + "</td>" + "<td>" + veiculos[i].Preco + "</td>" + "<td>" + veiculos[i].Estado + "</td>" + "<td>" + veiculos[i].Matricula + "</td>" + "<td>" + c.PesoMaximo + "</td>");
+                }
+            }
+            wr.WriteLine("</tr> <p></p>");
+            wr.WriteLine("</table>");
+            wr.WriteLine("<h3>Camionetas</h3>");
+            wr.WriteLine("<table>");
+            wr.WriteLine("<tr><td>Marca</td><td>Tipo</td><td>Cor</td><td>Combustivel</td><td>Preco</td><td>Estado</td><td>Matricula</td><td>Nº Eixos</td><td>Nº Passageiros</td>");
+            for (int i = 0; i < veiculos.Count; i++)
+            {
+                if (typeof(Camioneta) == veiculos[i].GetType())
+                {
+                    Camioneta c = veiculos[i] as Camioneta;
+                    wr.WriteLine("<tr><td>" + c.Marca + "</td>" + "<td>" + ((Camioneta)veiculos[i]).Tipo + "</td>" + "<td>" + veiculos[i].Cor + "</td>" + "<td>" + veiculos[i].Combustivel + "</td>" + "<td>" + veiculos[i].Preco + "</td>" + "<td>" + veiculos[i].Estado + "</td>" + "<td>" + veiculos[i].Matricula + "</td>" + "<td>" + c.NEixos + "</td>"+"<td>"+c.NPassageiros+"</td>");
+                }
+            }
+            wr.WriteLine("</tr> <p></p>");
+            wr.WriteLine("</table>");
+            wr.WriteLine("</div>");
+            wr.WriteLine("</body>");
+            wr.WriteLine("</html>");
+
+            wr.Close();
         }
     }
 }
