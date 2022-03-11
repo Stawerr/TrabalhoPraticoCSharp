@@ -299,12 +299,13 @@ namespace TrabalhoPratico
         private static void exportarHTML()
         {
             StreamWriter wr = new StreamWriter("stand.html");
-
             wr.WriteLine("<html>");
-            wr.WriteLine("<style>table{margin-left: auto;margin-right: auto} th, td {border: 1px solid black;padding:5px;text-align:center}tr:nth-child(even) {background: #CCC}tr:nth-child(odd) {background: #FFF} div{text-align:center}</style> ");
+            wr.WriteLine("<head>");
+            wr.WriteLine("<link rel = \"stylesheet\" href = \"style.css\" >");
+            wr.WriteLine("</head>");
             wr.WriteLine("<body>");
             wr.WriteLine("<div>");
-            wr.WriteLine("<h3>Carros</h3>");
+            wr.WriteLine("<h1 class=\"head-style-4\">Carros</h1><p></p>");
             wr.WriteLine("<table>");
             wr.WriteLine("<tr><td>Marca</td><td>Tipo</td><td>Cor</td><td>Combustivel</td><td>Preco</td><td>Estado</td><td>Matricula</td><td>NºPortas</td><td>Tipo Caixa</td>");
             for (int i = 0; i < veiculos.Count; i++)
@@ -316,7 +317,7 @@ namespace TrabalhoPratico
             }
             wr.WriteLine("</tr>");
             wr.WriteLine("</table>");
-            wr.WriteLine("<h3>Motas</h3>");
+            wr.WriteLine("<h1 class=\"head-style-4\">Motas</h1><p></p>");
             wr.WriteLine("<table>");
             wr.WriteLine("<tr><td>Marca</td><td>Tipo</td><td>Cor</td><td>Combustivel</td><td>Preco</td><td>Estado</td><td>Matricula</td><td>Cilindrada</td>");
             for (int i = 0; i < veiculos.Count; i++)
@@ -329,7 +330,7 @@ namespace TrabalhoPratico
             }
             wr.WriteLine("</tr> <p></p>");
             wr.WriteLine("</table>");
-            wr.WriteLine("<h3>Camiões</h3>");
+            wr.WriteLine("<h1 class=\"head-style-4\">Camiões</h1><p></p>");
             wr.WriteLine("<table>");
             wr.WriteLine("<tr><td>Marca</td><td>Tipo</td><td>Cor</td><td>Combustivel</td><td>Preco</td><td>Estado</td><td>Matricula</td><td>Peso Máximo</td>");
             for (int i = 0; i < veiculos.Count; i++)
@@ -342,7 +343,7 @@ namespace TrabalhoPratico
             }
             wr.WriteLine("</tr> <p></p>");
             wr.WriteLine("</table>");
-            wr.WriteLine("<h3>Camionetas</h3>");
+            wr.WriteLine("<h1 class=\"head-style-4\">Camionetas</h1><p></p>");
             wr.WriteLine("<table>");
             wr.WriteLine("<tr><td>Marca</td><td>Tipo</td><td>Cor</td><td>Combustivel</td><td>Preco</td><td>Estado</td><td>Matricula</td><td>Nº Eixos</td><td>Nº Passageiros</td>");
             for (int i = 0; i < veiculos.Count; i++)
