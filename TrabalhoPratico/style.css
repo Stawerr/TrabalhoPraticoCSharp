@@ -1,0 +1,134 @@
+/* #region css reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* #endregion css reset */
+
+body {
+  font-family: "Open Sans", Arial, Verdana, Helvetica, sans-serif;
+  background-color: rgb(100, 100, 100);
+  }
+table{
+  margin-left: auto
+  ;margin-right: auto
+}
+th, td {
+  border: 1px solid black;
+  padding:5px;
+  text-align:center
+}
+tr:nth-child(even) {
+  background: #CCC
+}
+tr:nth-child(odd) {
+    background: #FFF
+  }
+div{
+    text-align:center
+}
+.head-style-4 {
+  text-align: center;
+  position: relative;
+  line-height: 2;
+  overflow: hidden;
+}
+.head-style-4::before {
+  content: "";
+  display: inline-block;
+  bottom: 0.5ex;
+  left: -0.5ex;
+  width: 100%;
+  margin-left: -100%;
+  height: 2px;
+  position: relative;
+  background: #12CFE9;
+  transition: all 0.3s ease 0s;
+}
+.head-style-4:hover::before {
+  left: -2ex;
+}
+.head-style-4::after {
+  content: "";
+  display: inline-block;
+  bottom: 0.5ex;
+  left: 0.5ex;
+  margin-right: -100%;
+  width: 100%;
+  height: 2px;
+  position: relative;
+  background: #12CFE9;
+  transition: all 0.3s ease 0s;
+}
+.head-style-4:hover::after {
+  left: 2ex;
+}
